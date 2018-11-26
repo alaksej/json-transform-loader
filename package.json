@@ -16,7 +16,7 @@
     "url": "https://github.com/alaksej/json-transform-loader/issues"
   },
   "homepage": "https://github.com/alaksej/json-transform-loader#readme",
-  "devDependencies": {
+  "dependencies": {
     "loader-utils": "^1.1.0",
     "schema-utils": "^1.0.0"
   }
