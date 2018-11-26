@@ -1,0 +1,19 @@
+{
+  "name": "json-transform-loader",
+  "version": "1.0.0",
+  "description": "A webpack loader that transforms a JSON object with a user-defined function",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alaksej/json-transform-loader.git"
+  },
+  "author": "Aliaksei Yankou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alaksej/json-transform-loader/issues"
+  },
+  "homepage": "https://github.com/alaksej/json-transform-loader#readme"
+}
