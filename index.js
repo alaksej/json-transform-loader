@@ -9,6 +9,9 @@ module.exports = function jsonTransformLoader(source) {
   const obj = JSON.parse(source);
 
   const transformed = options.transformFn(obj);
+  if (!transformed) {
+    throw new Error('The "transformFn" function must return a value');
+  }
 
   return `${JSON.stringify(transformed)}`;
 }
