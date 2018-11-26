@@ -1,25 +1,14 @@
 const getOptions = require('loader-utils').getOptions;
-// const validateOptions = require('schema-utils');
-
-const schema = {
-  type: 'object',
-  properties: {
-    transformFn: {
-      type: 'function'
-    }
-  }
-};
+const validateOptions = require('schema-utils');
+const schema = require('./schema.json');
 
 module.exports = function jsonTransformLoader(source) {
-  
   const options = getOptions(this);
+  validateOptions(schema, options, 'JSON Transform Loader');
+
   const obj = JSON.parse(source);
 
-  // validateOptions(schema, options, 'Example Loader');
+  const transformed = options.transformFn(obj);
 
-  // Apply some transformations to the source...
-
-  const objAfter = options.transformFn(obj);
-
-  return `${JSON.stringify(objAfter)}`;
+  return `${JSON.stringify(transformed)}`;
 }
